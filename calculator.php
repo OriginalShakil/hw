@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>addition number</title>
+    <title>Number Calculator</title>
 </head>
 
 <body>
@@ -16,7 +16,10 @@
         <label>Number 2: </label>
         <input type="number" name="num2">
         <br>
-        <button type="submit">Submit</button>
+        <button type="submit">+</button>
+        <button type="submit">-</button>
+        <button type="submit">x</button>
+        <button type="submit">/</button>
     </form>
 
 
@@ -28,9 +31,18 @@
         $num1 = $_GET['num1'];
         $num2 = $_GET['num2'];
 
-        $sum = $num1 + $num2;   
+      if (isset($_GET['+'])) {
+            $sum = $num1 + $num2;
+        } else if (isset($_GET['-'])) {
+            $sum = $num1 - $num2;
+        } else if (isset($_GET['x'])) {
+            $sum = $num1 * $num2;
+        } else if (isset($_GET['/'])) {
+            $sum = $num1 / $num2;
+      }  
 
-        echo "the sum of the numbers is $sum";
+
+        echo "the Calculation of the numbers is $sum";
 
     }
 
