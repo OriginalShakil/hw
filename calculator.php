@@ -16,10 +16,10 @@
         <label>Number 2: </label>
         <input type="number" name="num2">
         <br>
-        <button type="submit">+</button>
-        <button type="submit">-</button>
-        <button type="submit">x</button>
-        <button type="submit">/</button>
+        <button type="submit" name="+">+</button>
+        <button type="submit" name="-">-</button>
+        <button type="submit" name="x">x</button>
+        <button type="submit" name="/">/</button>
     </form>
 
 
